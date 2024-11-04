@@ -55,8 +55,8 @@ class Game {
     * Checks if player has remaining lives and ends game if player is out
     ***/
     removeLife() {
-        const hearts = document.querySelectorAll('[src="images/liveHeart.png"]');
-        hearts[0].src = 'images/lostHeart.png';
+        const hearts = document.querySelectorAll('[src="images/liveHeart.svg"]');
+        hearts[0].src = 'images/lostHeart.svg';
         this.missed++;
         this.missed >= 5 && this.gameOver(false);
     }
@@ -89,6 +89,6 @@ class Game {
             button.className = 'key'
             button.disabled = false;
         });
-        document.querySelectorAll('.tries img').forEach(img => img.src = 'images/liveHeart.png');
+        document.querySelectorAll('.tries img').forEach(img => img.src = 'images/liveHeart.svg');
     }
 }
